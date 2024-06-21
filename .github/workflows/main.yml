@@ -22,5 +22,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Use oxr463/setup-cordova
+        uses: oxr463/setup-cordova@0.0.3
+        with:
+          exec: |
+            cd cordova && \
+            cordova platform add android && \
+            cordova build --no-telemetry && \
+            cp "$(find . -name '*.apk')" .
+
       - name: Build with Cordova
         run: npm run build-cordova
