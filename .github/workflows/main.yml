@@ -22,12 +22,20 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Cordova & dependencies
+      - name: Install Cordova globally
+        run: npm install -g cordova
+  
+      - name: Install cordova dependencies
         working-directory: cordova
-        run: npm install -g cordova && \
-          npm install && \
-          cordova platform add android && \
-          cordova platform add browser
+        run: npm install
+  
+      - name: Add Android platform
+        working-directory: cordova
+        run: cordova platform add android
+  
+      - name: Add Browser platform
+        working-directory: cordova
+        run: cordova platform add browser
 
       - name: Build with Cordova
         run: npm run build-cordova
