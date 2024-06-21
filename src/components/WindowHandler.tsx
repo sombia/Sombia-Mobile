@@ -1,16 +1,16 @@
-import '../styles/components/WindowHandler.scss'
+import '../styles/components/WindowHandler.scss';
+import StartPage from './StartPage';
 
 interface WindowHandlerProperties {
-    active: string
+    active: string;
 }
 
 function WindowHandler({ active }: WindowHandlerProperties) {
     return (
-        <div className="view">
-            {active}
-            {<button onClick={() => { window.open("https://google.com", "_blank") }}>Open Link</button>}
-        </div>
+        <>
+            {active == "start" ? <StartPage></StartPage> : <></>}
+        </>
     )
 }
 
-export default WindowHandler
+export default WindowHandler;

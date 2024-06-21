@@ -1,0 +1,10 @@
+.posts {
+    width: 99vw;
+    height: calc(100vh - 95px);
+    max-height: calc(100vh - 95px);
+
+    padding-bottom: 20px;
+
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
