@@ -22,8 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Setup Cordova environment
-        uses: buluma/setup-cordova@v0.0.3
+      - name: Install Cordova
+        run: npm install -g cordova
+
+      - name: Install Cordova dependencies
+        run: cd cordova && npm install
 
       - name: Build with Cordova
         run: npm run build-cordova
