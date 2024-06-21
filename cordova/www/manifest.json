@@ -1,0 +1,9 @@
+{
+    "name": "Sombia",
+    "short_name": "Sombia",
+    "theme_color": "#262626",
+    "background_color": "#262626",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/?standalone=1"
+}
