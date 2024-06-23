@@ -14,7 +14,7 @@
     "clear-cordova": "rm -rf cordova/www/*",
     "prepare-cordova": "cd cordova && npm install",
     "cordova-run": "cd cordova && cordova run browser",
-    "cordova-build": "cd cordova && cordova build browser",
+    "cordova-build": "cd cordova && cordova build browser && cordova build android",
     "cordova": "npm run vite-cordova && npm run clear-cordova && npm run copy-to-cordova && npm run cordova-run",
     "build-cordova": "npm run vite-cordova && npm run clear-cordova && npm run prepare-cordova && npm run copy-to-cordova && npm run cordova-build"
   },
