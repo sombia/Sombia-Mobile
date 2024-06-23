@@ -5,7 +5,7 @@ function StartPage() {
     return (
         <>
             <div className="posts">
-                <Post username="florian_rntg" type="3d" />
+                <Post username={(window as any).device.model} type="3d" />
                 <Post username="florian_rntg" type="image" />
                 <Post username="florian_rntg" type="image" />
                 <Post username="florian_rntg" type="image" />
