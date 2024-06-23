@@ -14,18 +14,22 @@
     "clear-cordova": "rm -rf cordova/www/*",
     "prepare-cordova": "cd cordova && npm install",
     "cordova-run": "cd cordova && cordova run browser",
-    "cordova-build": "cd cordova && cordova build browser && cordova build android",
+    "cordova-build": "cd cordova && cordova build browser",
     "cordova": "npm run vite-cordova && npm run clear-cordova && npm run copy-to-cordova && npm run cordova-run",
     "build-cordova": "npm run vite-cordova && npm run clear-cordova && npm run prepare-cordova && npm run copy-to-cordova && npm run cordova-build"
   },
   "dependencies": {
     "@octokit/rest": "^21.0.0",
+    "@react-three/fiber": "^8.16.8",
+    "@react-three/xr": "^5.7.1",
+    "@types/three": "^0.165.0",
     "marked": "^13.0.0",
     "marked-emoji": "^1.4.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
-    "sass": "^1.77.6"
+    "sass": "^1.77.6",
+    "three": "^0.165.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
