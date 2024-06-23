@@ -8,15 +8,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "vite-cordova": "tsc && vite build --mode cordova",
-    "copy-to-cordova": "cp -r dist/* cordova/www && cp -r dist/assets/* cordova/www/assets && rm -rf dist",
-    "clear-cordova": "rm -rf cordova/www/*",
-    "prepare-cordova": "cd cordova && npm install",
-    "cordova-run": "cd cordova && cordova run browser",
-    "cordova-build": "cd cordova && cordova build browser && cordova build android",
-    "cordova": "npm run vite-cordova && npm run clear-cordova && npm run copy-to-cordova && npm run cordova-run",
-    "build-cordova": "npm run vite-cordova && npm run clear-cordova && npm run prepare-cordova && npm run copy-to-cordova && npm run cordova-build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@octokit/rest": "^21.0.0",
